@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="header">
+    <a href="index.html">Главная</a><span>/</span>
+    <a href="puzzles.html">Загадки</a><span>/</span>
+    <a href="#">Угадайка</a><span>/</span>
+    <a href="media.html">Угадайка мультиплеер</a>
+    </div>
+    <div id="content">
+    <h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">
+    <img src="img/foto.jpg" alt="фотография">
+    <div id="box_text">
+    <script>
+    var N,p=0,C;
+    N=Math.floor(Math.random()*100+1);
+    
+    do
+    {
+      p++;
+      C=+prompt(p+"-ая попытка");
+      if (C>N) document.write(p+"."+C+"  Перелет<br>");
+      if (C<N) document.write(p+"."+C+" Недолет<br>"); 
+      if (C==N) document.write("Угадали!!!<br>");
+    }
+    while(C!=N && p<7);
+
+
+</script>
+    </div>
+    </div>
+    </div>
+    <div id="footer">
+            <a href="puzzles.html">
+               Загадки
+            </a>/
+            <a href="guess.html">
+               Угадайка
+            </a>/
+            <a href="media.html">
+               Угадайка мультиплеер
+            </a>
+      Copyright © 2016 <a href="https://geekbrains.ru/" target="_blank">GeekBrains</a>
+    </div>
+</body>
+</html>

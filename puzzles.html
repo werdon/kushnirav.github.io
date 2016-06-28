@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="header">
+    <a href="index.html">Главная</a><span>/</span>
+    <a href="puzzles.html">Загадки</a><span>/</span>
+    <a href="guess.html">Угадайка</a><span>/</span>
+    <a href="media.html">Угадайка мультиплеер</a>
+    </div>
+    <div id="content">
+    <h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">
+    <img src="img/foto.jpg" alt="фотография">
+    <div id="box_text">
+    
+<h3>Отгадай загадки!</h3>
+        <p>Ни окон ни дверей полна горница людей<p/>
+        <input type="text" id="puzzle1"/>
+        <p>В него нельзя плевать<p/>
+        <input type="text" id="puzzle2"/>
+        <p>В розетке их 3х букв<p/>
+        <input type="text" id="puzzle3"/>
+        <input onclick="Answers()" type="button" value="Ответить"/>
+        <p id="count"></p>
+
+    </div>
+    </div>
+    </div>
+    <div id="footer">
+            <a href="puzzles.html">
+               Загадки
+            </a>/
+            <a href="guess.html">
+               Угадайка
+            </a>/
+            <a href="media.html">
+               Угадайка мультиплеер
+            </a>
+      Copyright © 2016 <a href="https://geekbrains.ru/" target="_blank">GeekBrains</a>
+    </div>
+    <script>
+    
+    function Answers()
+        {
+            var score=0;
+            var userAnswer=document.getElementById("puzzle1").value;
+            userAnswer=userAnswer.toLowerCase();
+            if (userAnswer=="огурец" || userAnswer=="огурчик")
+                score++;
+            userAnswer=document.getElementById("puzzle2").value;
+            userAnswer=userAnswer.toLowerCase();
+            if (userAnswer=="колодец")
+                score++;
+            userAnswer=document.getElementById("puzzle3").value;
+            userAnswer=userAnswer.toLowerCase();
+            if (userAnswer=="ток" || userAnswer=="ват")
+               score++;
+            document.getElementById("count").innerHTML="Правильных ответов "+score;
+        }
+    </script>
+</body>
+</html>
